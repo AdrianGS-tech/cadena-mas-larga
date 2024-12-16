@@ -11,12 +11,12 @@ class Solution3 {
             char c= s.charAt(i);
             if(!set.contains(c)){
                 set.add(c);
-                max = Math.max(max, i+j+1);
+                max = Math.max(max, i-j+1);
                 i++;
             }else{
                 c = s.charAt(j);
                 set.remove(c);
-                j++
+                j++;
             }
         }
         return max;
